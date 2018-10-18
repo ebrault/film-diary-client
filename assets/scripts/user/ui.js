@@ -18,6 +18,7 @@ const signUpFailure = function () {
 
 const signInSuccess = function (response) {
   $('#display-message').removeClass('hidden')
+  $('#display-films').removeClass('hidden')
   $('#display-message').html('Sign in successful!')
   $('#display-message').css('color', 'green')
   $('#sign-in-form').trigger('reset')
@@ -58,6 +59,7 @@ const signOutSuccess = function () {
   $('#display-message').removeClass('hidden')
   $('#display-message').html('Sign out successful!')
   $('#display-message').css('color', 'green')
+  $('#display-films').html('')
   $('#sign-in-form').trigger('reset')
   $('#sign-up-form').trigger('reset')
   $('#change-password-form').trigger('reset')

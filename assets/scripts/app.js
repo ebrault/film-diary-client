@@ -7,16 +7,16 @@
 // require('./example')
 
 const userEvents = require('./user/events')
-// const filmEvents = require('./film/events')
+const filmEvents = require('./film/events')
 
 $(() => {
   $('#sign-up-form').on('submit', userEvents.onSignUp)
   $('#sign-in-form').on('submit', userEvents.onSignIn)
   $('#change-password-form').on('submit', userEvents.onChangePassword)
   $('#sign-out-button').on('click', userEvents.onSignOut)
-  // $('#add-film-form').on('submit', filmEvents.onAddFilm)
-  // $('#modify-film-form').on('submit', filmEvents.onModifyFilm)
-  // $('#get-all-films-button').on('click', filmEvents.onGetAllFilms)
-  // $('#get-one-film-form').on('submit', filmEvents.onGetOneFilm)
-  // $('#delete-film-form').on('submit', filmEvents.onDeleteFilm)
+  $('#add-film-form').on('submit', filmEvents.onAddFilm)
+  $('#modify-film-form').on('submit', filmEvents.onModifyFilm)
+  $('#get-all-films-button').on('click', filmEvents.onGetAllFilms)
+  $('#get-one-film-form').on('submit', filmEvents.onGetOneFilm)
+  $('#delete-film-form').on('submit', filmEvents.onDeleteFilm)
 })
