@@ -73,6 +73,7 @@ const modifyFilmFailure = function () {
 
 const deleteFilmSuccess = function () {
   $('#display-message').html('Deletion successful!')
+  $('#display-films').html('')
   $('#display-message').css('color', 'green')
   $('#delete-film-form').trigger('reset')
 }
