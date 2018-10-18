@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Film Diary!</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,56 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>Film Diary!</h1>
+      <form id="sign-up-form">
+        <legend>Sign Up!</legend>
+        <input required name=credentials[email] type="email" placeholder="Email" />
+        <input required name=credentials[password] type="password" placeholder="Password"/>
+        <input required name=credentials[password_confirmation] type="password" placeholder="Confirm Password"/>
+        <input type="submit" />
+      </form>
+      <br />
+      <form id="sign-in-form">
+        <legend>Sign In!</legend>
+        <input required name=credentials[email] type="email" placeholder="Email" />
+        <input required name=credentials[password] type="password" placeholder="Password" />
+        <input type="submit" />
+      </form>
+      <br />
+      <form id="change-password-form" class="hidden">
+        <legend>Change Password</legend>
+        <input required name="passwords[old]" type="password" placeholder="Old Password" />
+        <input required name="passwords[new]" type="password" placeholder="New Password" />
+        <input type="submit" />
+       </form>
+       <br />
+       <button id="sign-out-button" class="hidden">Sign Out</button>
+       <br />
+       <form id="add-film-form" class="hidden">
+         <legend>Add A Film</legend>
+         <input required name="film[title]" type="text" placeholder="Title" />
+         <input required name="film[director]" type="text" placeholder="Director" />
+         <input type="submit" />
+       </form>
+       <form id="modify-film-form" class="hidden">
+         <legend>Modify A Film</legend>
+         <input required name="film[id]" type="text" placeholder="ID" />
+         <input required name="film[title]" type="text" placeholder="Title" />
+         <input required name="film[director]" type="text" placeholder="Director" />
+         <input type="submit" />
+       </form>
+       <button id="get-all-films-button" class="hidden">Get All Films</button>
+       <form id="get-one-film-form" class="hidden">
+         <legend>Get One Film</legend>
+         <input required name="film[id]" type="text" placeholder="ID" />
+         <input type="submit" />
+       </form>
+       <form id="delete-film-form" class="hidden">
+         <legend>Delete A Film</legend>
+         <input required name="film[id]" type="text" placeholder="ID" />
+         <input type="submit" />
+       </form>
+       <h1 id="display-message" class="hidden"></h1>
+       <h1 id="display-films" class="hidden"></h1>
     </body>
 </html>
