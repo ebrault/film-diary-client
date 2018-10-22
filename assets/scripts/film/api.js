@@ -4,7 +4,6 @@ const config = require('../config.js')
 const store = require('../store.js')
 
 const addFilm = function (data) {
-  console.log(data)
   return $.ajax({
     url: config.apiUrl + '/films',
     headers: {
