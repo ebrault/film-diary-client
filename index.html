@@ -41,13 +41,17 @@
          <legend>Add A Film</legend>
          <input required name="film[title]" type="text" placeholder="Title" />
          <input required name="film[director]" type="text" placeholder="Director" />
+         <input required name="film[rating]" type="text" placeholder="Rating" />
+         <input required name="film[watched]" type="text" placeholder="Watched On" />
          <input type="submit" />
        </form>
        <form id="modify-film-form" class="hidden">
          <legend>Modify A Film</legend>
          <input required name="film[id]" type="text" placeholder="ID" />
-         <input required name="film[title]" type="text" placeholder="Title" />
-         <input required name="film[director]" type="text" placeholder="Director" />
+         <input name="film[title]" type="text" placeholder="Title" />
+         <input name="film[director]" type="text" placeholder="Director" />
+         <input name="film[rating]" type="text" placeholder="Rating" />
+         <input name="film[watched]" type="text" placeholder="Watched On" />
          <input type="submit" />
        </form>
        <button id="get-all-films-button" class="hidden">Get All Films</button>

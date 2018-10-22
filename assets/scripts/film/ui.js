@@ -20,6 +20,8 @@ const getAllFilmsSuccess = function (data) {
     const filmHtml = (`
         <h4>Title: ${film.title}</h4>
         <p>Director: ${film.director}</p>
+        <p>Rating: ${film.rating}</p>
+        <p>Watched On: ${film.watched}</p>
         <p>ID: ${film.id}</p>
         </ br>
       `)
@@ -39,6 +41,8 @@ const getOneFilmSuccess = function (data) {
   const filmHtml = (`
       <h4>Title: ${film.title}</h4>
       <p>Director: ${film.director}</p>
+      <p>Rating: ${film.rating}</p>
+      <p>Watched On: ${film.watched}</p>
       <p>ID: ${film.id}</p>
       </ br>
     `)
@@ -59,6 +63,8 @@ const modifyFilmSuccess = function (data) {
   const filmHtml = (`
     <h4>Title: ${film.title}</h4>
     <p>Director: ${film.director}</p>
+    <p>Rating: ${film.rating}</p>
+    <p>Watched On: ${film.watched}</p>
     <p>ID: ${film.id}</p>
     `)
   $('#display-films').append(filmHtml)
