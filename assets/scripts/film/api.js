@@ -36,7 +36,6 @@ const getOneFilm = function (filmData) {
 }
 
 const modifyFilm = function (data) {
-  console.log(data)
   const filmId = data.film.id
   return $.ajax({
     url: config.apiUrl + `/films/${filmId}`,
@@ -49,7 +48,6 @@ const modifyFilm = function (data) {
 }
 
 const deleteFilm = function (data) {
-  console.log(data)
   const filmId = data.film.id
   return $.ajax({
     url: config.apiUrl + `/films/${filmId}`,

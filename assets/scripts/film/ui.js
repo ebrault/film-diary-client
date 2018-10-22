@@ -58,16 +58,9 @@ const getOneFilmFailure = function () {
 
 const modifyFilmSuccess = function (data) {
   $('#display-message').html('')
+  $('#display-message').html('Update Successful!')
   $('#display-films').html('')
-  const film = data.film
-  const filmHtml = (`
-    <h4>Title: ${film.title}</h4>
-    <p>Director: ${film.director}</p>
-    <p>Rating: ${film.rating}</p>
-    <p>Watched On: ${film.watched}</p>
-    <p>ID: ${film.id}</p>
-    `)
-  $('#display-films').append(filmHtml)
+  $('#display-message').css('color', 'green')
   $('#modify-film-form').trigger('reset')
 }
 
