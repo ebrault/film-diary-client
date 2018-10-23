@@ -1,13 +1,24 @@
 'use strict'
 
-const addFilmSuccess = function () {
+const addFilmSuccess = function (data) {
   $('#display-films').html('')
   $('#display-message').html('Add successful!')
   $('#display-message').css('color', 'green')
+  const film = data.film
+  const filmHtml = (`
+      <p>Title: ${film.title}</p>
+      <h4>Director: ${film.director}</h4>
+      <h4>Rating: ${film.rating}</h4>
+      <h4>Watched On: ${film.watched}</h4>
+      <h4>ID: ${film.id}</h4>
+      </ br>
+    `)
+  $('#display-films').html(filmHtml)
   $('#add-film-form').trigger('reset')
 }
 
 const addFilmFailure = function () {
+  $('#display-films').html('')
   $('#display-message').html('Something went wrong, please try again!')
   $('#display-message').css('color', 'red')
   $('#add-film-form').trigger('reset')
@@ -18,11 +29,11 @@ const getAllFilmsSuccess = function (data) {
   $('#display-films').html('')
   data.films.forEach(function (film) {
     const filmHtml = (`
-        <h4>Title: ${film.title}</h4>
-        <p>Director: ${film.director}</p>
-        <p>Rating: ${film.rating}</p>
-        <p>Watched On: ${film.watched}</p>
-        <p>ID: ${film.id}</p>
+        <p>Title: ${film.title}</p>
+        <h4>Director: ${film.director}</h4>
+        <h4>Rating: ${film.rating}</h4>
+        <h4>Watched On: ${film.watched}</h4>
+        <h4>ID: ${film.id}</h4>
         </ br>
       `)
     $('#display-films').append(filmHtml)
@@ -30,6 +41,7 @@ const getAllFilmsSuccess = function (data) {
 }
 
 const getAllFilmsFailure = function () {
+  $('#display-films').html('')
   $('#display-message').html('Something went wrong, please try again!')
   $('#display-message').css('color', 'red')
 }
@@ -39,11 +51,11 @@ const getOneFilmSuccess = function (data) {
   $('#display-films').html('')
   const film = data.film
   const filmHtml = (`
-      <h4>Title: ${film.title}</h4>
-      <p>Director: ${film.director}</p>
-      <p>Rating: ${film.rating}</p>
-      <p>Watched On: ${film.watched}</p>
-      <p>ID: ${film.id}</p>
+      <p>Title: ${film.title}</p>
+      <h4>Director: ${film.director}</h4>
+      <h4>Rating: ${film.rating}</h4>
+      <h4>Watched On: ${film.watched}</h4>
+      <h4>ID: ${film.id}</h4>
       </ br>
     `)
   $('#display-films').html(filmHtml)
@@ -66,19 +78,21 @@ const modifyFilmSuccess = function (data) {
 }
 
 const modifyFilmFailure = function () {
+  $('#display-films').html('')
   $('#display-message').html('Something went wrong, please try again!')
   $('#display-message').css('color', 'red')
   $('#modify-film-form').trigger('reset')
 }
 
 const deleteFilmSuccess = function () {
-  $('#display-message').html('Deletion successful!')
   $('#display-films').html('')
+  $('#display-message').html('Deletion successful!')
   $('#display-message').css('color', 'green')
   $('#delete-film-form').trigger('reset')
 }
 
 const deleteFilmFailure = function () {
+  $('#display-films').html('')
   $('#display-message').html('Something went wrong, please try again!')
   $('#display-message').css('color', 'red')
   $('#delete-film-form').trigger('reset')
