@@ -53,6 +53,7 @@ const getOneFilmSuccess = function (data) {
 const getOneFilmFailure = function () {
   $('#display-message').html('Something went wrong, please try again!')
   $('#display-message').css('color', 'red')
+  $('#display-films').html('')
   $('#get-one-film-form').trigger('reset')
 }
 
