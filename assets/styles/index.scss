@@ -50,6 +50,19 @@ button {
   color: #f4fbf0;
   border-radius: 3px;
   border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #66f433;
+}
+
+::selection {
+  background: #dd7711;
+}
+
+::-moz-selection {
+  background: #dd7711;
 }
 
 .flex-container {
