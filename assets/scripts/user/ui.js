@@ -67,6 +67,7 @@ const signOutSuccess = function () {
   $('#sign-in-form').removeClass('hidden')
   $('#change-password-form').addClass('hidden')
   $('#add-film-form').addClass('hidden')
+  $('#diary-empty-message').addClass('hidden')
   $('#get-all-films-button').addClass('hidden')
   $('#get-one-film-form').addClass('hidden')
   $('#modify-film-form').addClass('hidden')
