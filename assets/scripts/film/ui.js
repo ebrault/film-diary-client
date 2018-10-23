@@ -3,7 +3,7 @@
 const addFilmSuccess = function (data) {
   $('#display-films').html('')
   $('#display-message').html('Add successful!')
-  $('#display-message').css('color', 'green')
+  $('#display-message').css('color', '#66cc33')
   const film = data.film
   const filmHtml = (`
       <p>Title: ${film.title}</p>
@@ -14,13 +14,14 @@ const addFilmSuccess = function (data) {
       </ br>
     `)
   $('#display-films').html(filmHtml)
+  $('#display-films').css('color', '#66cc33')
   $('#add-film-form').trigger('reset')
 }
 
 const addFilmFailure = function () {
   $('#display-films').html('')
   $('#display-message').html('Something went wrong, please try again!')
-  $('#display-message').css('color', 'red')
+  $('#display-message').css('color', '#dd7711')
   $('#add-film-form').trigger('reset')
 }
 
@@ -37,13 +38,14 @@ const getAllFilmsSuccess = function (data) {
         </ br>
       `)
     $('#display-films').append(filmHtml)
+    $('#display-films').css('color', '#66cc33')
   })
 }
 
 const getAllFilmsFailure = function () {
   $('#display-films').html('')
   $('#display-message').html('Something went wrong, please try again!')
-  $('#display-message').css('color', 'red')
+  $('#display-message').css('color', '#dd7711')
 }
 
 const getOneFilmSuccess = function (data) {
@@ -59,12 +61,13 @@ const getOneFilmSuccess = function (data) {
       </ br>
     `)
   $('#display-films').html(filmHtml)
+  $('#display-films').css('color', '#66cc33')
   $('#get-one-film-form').trigger('reset')
 }
 
 const getOneFilmFailure = function () {
   $('#display-message').html('Something went wrong, please try again!')
-  $('#display-message').css('color', 'red')
+  $('#display-message').css('color', '#dd7711')
   $('#display-films').html('')
   $('#get-one-film-form').trigger('reset')
 }
@@ -72,29 +75,29 @@ const getOneFilmFailure = function () {
 const modifyFilmSuccess = function (data) {
   $('#display-message').html('')
   $('#display-message').html('Update Successful!')
+  $('#display-message').css('color', '#66cc33')
   $('#display-films').html('')
-  $('#display-message').css('color', 'green')
   $('#modify-film-form').trigger('reset')
 }
 
 const modifyFilmFailure = function () {
   $('#display-films').html('')
   $('#display-message').html('Something went wrong, please try again!')
-  $('#display-message').css('color', 'red')
+  $('#display-message').css('color', '#dd7711')
   $('#modify-film-form').trigger('reset')
 }
 
 const deleteFilmSuccess = function () {
   $('#display-films').html('')
   $('#display-message').html('Deletion successful!')
-  $('#display-message').css('color', 'green')
+  $('#display-message').css('color', '#66cc33')
   $('#delete-film-form').trigger('reset')
 }
 
 const deleteFilmFailure = function () {
   $('#display-films').html('')
   $('#display-message').html('Something went wrong, please try again!')
-  $('#display-message').css('color', 'red')
+  $('#display-message').css('color', '#dd7711')
   $('#delete-film-form').trigger('reset')
 }
 

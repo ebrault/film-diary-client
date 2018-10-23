@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Film Diary!</title>
+      <title>PFDb - Your Personal Film Database</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,7 +12,8 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Film Diary!</h1>
+      <header>
+      <h1>PFDb - Your Personal Film Database</h1>
       <form id="sign-up-form">
         <legend>Sign Up!</legend>
         <input required name=credentials[email] type="email" placeholder="Email" />
@@ -37,6 +38,9 @@
        <br />
        <button id="sign-out-button" class="hidden">Sign Out</button>
        <br />
+     </header>
+     <div class="flex-container">
+     <div class="add-div">
        <form id="add-film-form" class="hidden">
          <legend>Add A Film</legend>
          <input required name="film[title]" type="text" placeholder="Title" />
@@ -45,6 +49,8 @@
          <input required name="film[watched]" type="text" placeholder="Watched On" />
          <input type="submit" />
        </form>
+     </div>
+     <div class="modify-div">
        <form id="modify-film-form" class="hidden">
          <legend>Modify A Film</legend>
          <input required name="film[id]" type="text" placeholder="ID" />
@@ -54,18 +60,27 @@
          <input name="film[watched]" type="text" placeholder="Watched On" />
          <input type="submit" />
        </form>
+     </div>
+     <div class="read-div">
        <button id="get-all-films-button" class="hidden">Get All Films</button>
        <form id="get-one-film-form" class="hidden">
          <legend>Get One Film</legend>
          <input required name="film[id]" type="text" placeholder="ID" />
          <input type="submit" />
        </form>
+     </div>
+     <div class="delete-div">
        <form id="delete-film-form" class="hidden">
          <legend>Delete A Film</legend>
          <input required name="film[id]" type="text" placeholder="ID" />
          <input type="submit" />
        </form>
+     </div>
+   </div>
        <h1 id="display-message" class="hidden"></h1>
        <h1 id="display-films" class="hidden"></h1>
+       <footer>
+         <h4>Designed by Emmet Brault</h4>
+       </footer>
     </body>
 </html>

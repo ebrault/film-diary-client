@@ -5,14 +5,14 @@ const store = require('../store')
 const signUpSuccess = function () {
   $('#display-message').removeClass('hidden')
   $('#display-message').html('Sign up successful!')
-  $('#display-message').css('color', 'green')
+  $('#display-message').css('color', '#66cc33')
   $('#sign-up-form').trigger('reset')
 }
 
 const signUpFailure = function () {
   $('#display-message').removeClass('hidden')
   $('#display-message').html('Something went wrong, please try again!')
-  $('#display-message').css('color', 'red')
+  $('#display-message').css('color', '#dd7711')
   $('#sign-up-form').trigger('reset')
 }
 
@@ -20,7 +20,7 @@ const signInSuccess = function (response) {
   $('#display-message').removeClass('hidden')
   $('#display-films').removeClass('hidden')
   $('#display-message').html('Sign in successful!')
-  $('#display-message').css('color', 'green')
+  $('#display-message').css('color', '#66cc33')
   $('#sign-in-form').trigger('reset')
   store.user = response.user
   $('#sign-up-form').addClass('hidden')
@@ -37,28 +37,28 @@ const signInSuccess = function (response) {
 const signInFailure = function () {
   $('#display-message').removeClass('hidden')
   $('#display-message').html('Something went wrong, please try again!')
-  $('#display-message').css('color', 'red')
+  $('#display-message').css('color', '#dd7711')
   $('#sign-in-form').trigger('reset')
 }
 
 const changePasswordSuccess = function () {
   $('#display-message').removeClass('hidden')
   $('#display-message').html('Password changed successfully!')
-  $('#display-message').css('color', 'green')
+  $('#display-message').css('color', '#66cc33')
   $('#change-password-form').trigger('reset')
 }
 
 const changePasswordFailure = function () {
   $('#display-message').removeClass('hidden')
   $('#display-message').html('Something went wrong, please try again!')
-  $('#display-message').css('color', 'red')
+  $('#display-message').css('color', '#dd7711')
   $('#change-password-form').trigger('reset')
 }
 
 const signOutSuccess = function () {
   $('#display-message').removeClass('hidden')
   $('#display-message').html('Sign out successful!')
-  $('#display-message').css('color', 'green')
+  $('#display-message').css('color', '#66cc33')
   $('#display-films').html('')
   $('#sign-in-form').trigger('reset')
   $('#sign-up-form').trigger('reset')
@@ -77,7 +77,7 @@ const signOutSuccess = function () {
 const signOutFailure = function () {
   $('#display-message').removeClass('hidden')
   $('#display-message').html('Something went wrong, please try again!')
-  $('#display-message').css('color', 'red')
+  $('#display-message').css('color', '#dd7711')
 }
 
 module.exports = {
