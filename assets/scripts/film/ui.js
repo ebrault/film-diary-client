@@ -17,6 +17,9 @@ const addFilmSuccess = function (data) {
   $('#display-films').html(filmHtml)
   $('#display-films').css('color', '#66cc33')
   $('#add-film-form').trigger('reset')
+  $('#modify-film-form').trigger('reset')
+  $('#get-one-film-form').trigger('reset')
+  $('delete-film-form').trigger('reset')
 }
 
 const addFilmFailure = function () {
@@ -25,6 +28,9 @@ const addFilmFailure = function () {
   $('#display-message').html('Something went wrong, please try again!')
   $('#display-message').css('color', '#dd7711')
   $('#add-film-form').trigger('reset')
+  $('#modify-film-form').trigger('reset')
+  $('#get-one-film-form').trigger('reset')
+  $('delete-film-form').trigger('reset')
 }
 
 const getAllFilmsSuccess = function (data) {
@@ -71,7 +77,10 @@ const getOneFilmSuccess = function (data) {
     `)
   $('#display-films').html(filmHtml)
   $('#display-films').css('color', '#66cc33')
+  $('#add-film-form').trigger('reset')
   $('#get-one-film-form').trigger('reset')
+  $('#modify-film-form').trigger('reset')
+  $('delete-film-form').trigger('reset')
 }
 
 const getOneFilmFailure = function () {
@@ -80,6 +89,9 @@ const getOneFilmFailure = function () {
   $('#display-message').css('color', '#dd7711')
   $('#display-films').html('')
   $('#get-one-film-form').trigger('reset')
+  $('#add-film-form').trigger('reset')
+  $('#modify-film-form').trigger('reset')
+  $('delete-film-form').trigger('reset')
 }
 
 const modifyFilmSuccess = function (data) {
@@ -89,6 +101,9 @@ const modifyFilmSuccess = function (data) {
   $('#display-message').css('color', '#66cc33')
   $('#display-films').html('')
   $('#modify-film-form').trigger('reset')
+  $('#get-one-film-form').trigger('reset')
+  $('#add-film-form').trigger('reset')
+  $('delete-film-form').trigger('reset')
 }
 
 const modifyFilmFailure = function () {
@@ -96,6 +111,9 @@ const modifyFilmFailure = function () {
   $('#display-message').html('Something went wrong, please try again!')
   $('#display-message').css('color', '#dd7711')
   $('#modify-film-form').trigger('reset')
+  $('#get-one-film-form').trigger('reset')
+  $('#add-film-form').trigger('reset')
+  $('delete-film-form').trigger('reset')
 }
 
 const deleteFilmSuccess = function () {
@@ -104,6 +122,9 @@ const deleteFilmSuccess = function () {
   $('#display-message').html('Deletion successful!')
   $('#display-message').css('color', '#66cc33')
   $('#delete-film-form').trigger('reset')
+  $('#modify-film-form').trigger('reset')
+  $('#get-one-film-form').trigger('reset')
+  $('#add-film-form').trigger('reset')
 }
 
 const deleteFilmFailure = function () {
@@ -112,6 +133,9 @@ const deleteFilmFailure = function () {
   $('#display-message').html('Something went wrong, please try again!')
   $('#display-message').css('color', '#dd7711')
   $('#delete-film-form').trigger('reset')
+  $('#modify-film-form').trigger('reset')
+  $('#get-one-film-form').trigger('reset')
+  $('#add-film-form').trigger('reset')
 }
 
 module.exports = {

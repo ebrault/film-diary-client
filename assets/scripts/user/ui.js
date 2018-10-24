@@ -32,6 +32,10 @@ const signInSuccess = function (response) {
   $('#get-one-film-form').removeClass('hidden')
   $('#modify-film-form').removeClass('hidden')
   $('#delete-film-form').removeClass('hidden')
+  $('#add-film-form').trigger('reset')
+  $('#modify-film-form').trigger('reset')
+  $('#get-one-film-form').trigger('reset')
+  $('#add-film-form').trigger('reset')
 }
 
 const signInFailure = function () {
@@ -46,6 +50,10 @@ const changePasswordSuccess = function () {
   $('#display-message').html('Password changed successfully!')
   $('#display-message').css('color', '#66cc33')
   $('#change-password-form').trigger('reset')
+  $('#add-film-form').trigger('reset')
+  $('#modify-film-form').trigger('reset')
+  $('#get-one-film-form').trigger('reset')
+  $('#add-film-form').trigger('reset')
 }
 
 const changePasswordFailure = function () {
@@ -53,6 +61,10 @@ const changePasswordFailure = function () {
   $('#display-message').html('Something went wrong, please try again!')
   $('#display-message').css('color', '#dd7711')
   $('#change-password-form').trigger('reset')
+  $('#add-film-form').trigger('reset')
+  $('#modify-film-form').trigger('reset')
+  $('#get-one-film-form').trigger('reset')
+  $('#add-film-form').trigger('reset')
 }
 
 const signOutSuccess = function () {
@@ -63,6 +75,10 @@ const signOutSuccess = function () {
   $('#sign-in-form').trigger('reset')
   $('#sign-up-form').trigger('reset')
   $('#change-password-form').trigger('reset')
+  $('#add-film-form').trigger('reset')
+  $('#modify-film-form').trigger('reset')
+  $('#get-one-film-form').trigger('reset')
+  $('#delete-film-form').trigger('reset')
   $('#sign-up-form').removeClass('hidden')
   $('#sign-in-form').removeClass('hidden')
   $('#change-password-form').addClass('hidden')
@@ -79,6 +95,10 @@ const signOutFailure = function () {
   $('#display-message').removeClass('hidden')
   $('#display-message').html('Something went wrong, please try again!')
   $('#display-message').css('color', '#dd7711')
+  $('#add-film-form').trigger('reset')
+  $('#modify-film-form').trigger('reset')
+  $('#get-one-film-form').trigger('reset')
+  $('#add-film-form').trigger('reset')
 }
 
 module.exports = {
